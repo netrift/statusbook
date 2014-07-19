@@ -1,0 +1,7 @@
+name: Statusbook API
+type: module
+description: 'API and untility functions/classes for the statusbook package.'
+package: Statusbook
+version: 1.0
+core: 8.x
+dependencies:
