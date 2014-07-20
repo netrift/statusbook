@@ -1,8 +1,0 @@
-name: Statusbook Friend
-type: module
-description: 'Module to handle simple friend relationship'
-package: Statusbook
-version: 1.0
-core: 8.x
-dependencies:
-  - sb_api
