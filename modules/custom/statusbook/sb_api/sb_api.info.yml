@@ -1,4 +1,4 @@
-name: Statusbook API
+name: SB_api
 type: module
 description: 'API and untility functions/classes for the statusbook package.'
 package: Statusbook

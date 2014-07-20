@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the sb_relation module.
+ */
+
+/**
+ * Implements hook_schema();
+ */
+function sb_relation_schema() {
+
+  $schema['sb_relation_data'] = array(
+    'fields' => array(
+      'relid' => array(
+        'description' => 'Primary key: relation id for user'
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+  );
+
+  return $schema;
+};

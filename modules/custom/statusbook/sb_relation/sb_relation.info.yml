@@ -1,0 +1,8 @@
+name: SB_relation
+type: module
+description: 'Manage user relations between eachother.'
+package: Statusbook
+version: 1.0
+core: 8.x
+dependencies:
+  - sb_api
