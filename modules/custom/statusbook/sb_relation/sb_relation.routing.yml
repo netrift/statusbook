@@ -1,0 +1,7 @@
+sb_relation.friends:
+  path: '/friends'
+  defaults:
+    _content: '\Drupal\sb_relation\Controller\SB_RelationController::friends'
+    _title: 'Friends'
+  requirements:
+    _permission: 'access content'

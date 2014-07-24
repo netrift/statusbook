@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * Enables the user relation between eachother.
+ */
+
+/** 
+ * Relation Types
+ */
+const FRIEND = 1; // two way relation
+const FOLLOW = 2; // one way relation
