@@ -9,10 +9,13 @@ namespace Drupal\sb_relation\Plugin\Block;
 
 use Drupal\block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+//use Symfony\Component\HttpFoundation\Request;
+//use Symfony\Component\HttpFoundation\RequestStack;
 
 
 /** 
- * Provide block to actions on currently viewed user profile.
+ * Provide block for actions on currently viewed user profile.
  * 
  * @Block(
  *    id = "sb_relation_user_block",
@@ -20,6 +23,7 @@ use Drupal\Core\Session\AccountInterface;
  * )
  */
 class SB_RelationUserBlock extends BlockBase {
+
 
   /**
    * {@inheritdoc}
@@ -32,9 +36,22 @@ class SB_RelationUserBlock extends BlockBase {
   * {@inheritdoc}
   */
   public function build() {
-    return array(
-      '#markup' => $this->t('This content needs to use MVC'),
-    );
+    $request = \Drupal::request();
+    if ($account = $request->get('user')) {
+
+      $relationship = l ($account->getUsername(), $account->url());
+
+      $return_val = array(
+        '#markup' => $relationship,
+      );
+
+    }
+    else {
+      $return_val = array(
+        '#markup' => t('Not viewing a user')
+      );
+    }
+    return $return_val;
   }
 
 }
